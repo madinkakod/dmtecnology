@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - DMTechnology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cart_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="DMTechnology Logo">
+                <h1>DMTechnology</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="cart-page">
+            <h2>Ваша корзина</h2>
+
+            <div class="cart-grid">
+                <div class="cart-items">
+                    <!-- Пример элемента корзины -->
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="img/наушники сони.jpg" alt="Наушники Sony WH-1000XM5">
+                        </div>
+                        <div class="item-info">
+                            <h3>Наушники Sony WH-1000XM5</h3>
+                            <p class="price">Цена: 34 990 ₽</p>
+                        </div>
+                        <div class="item-quantity">
+                            <div class="quantity-controls">
+                                <button class="quantity-button minus">-</button>
+                                <input type="number" class="quantity-input" value="1" min="1">
+                                <button class="quantity-button plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-remove">
+                            <button class="remove-item">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="img/самсунг с23ультра.jpg" alt="Смартфон Samsung Galaxy S23 Ultra">
+                        </div>
+                        <div class="item-info">
+                            <h3>Смартфон Samsung Galaxy S23 Ultra</h3>
+                            <p class="price">Цена: 119 990 ₽</p>
+                        </div>
+                        <div class="item-quantity">
+                            <div class="quantity-controls">
+                                <button class="quantity-button minus">-</button>
+                                <input type="number" class="quantity-input" value="2" min="1">
+                                <button class="quantity-button plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-remove">
+                            <button class="remove-item">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Другие элементы корзины -->
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Итого:</h3>
+                    <p class="total-price">154 980 ₽</p>
+                    <button class="checkout-button">Оформить заказ</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 DMTechnology. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

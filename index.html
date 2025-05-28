@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DMTechnology - Мир Технологий </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="DMTechnology Logo">
+                <h1>DMTechnology</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Инновации, которые вдохновляют.</h2>
+                    <p>Погрузитесь в мир передовых технологий и эксклюзивных предложений.</p>
+                    <a href="catalog.html" class="button">Исследовать каталог</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/хамин.jpg" alt="Гаджеты">
+                </div>
+            </section>
+
+            <section class="featured-products">
+                <h2>Рекомендуемые товары</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/смартфон.jpg" alt="Смартфон">
+                        </div>
+                        <h3>Смартфон X</h3>
+                        <p>Исключительная производительность и элегантный дизайн.</p>
+                        <span class="price">59 990 ₽</span>
+                        <a href="#" class="button">В корзину</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/наушник.jpg" alt="Наушники">
+                        </div>
+                        <h3>Наушники Y</h3>
+                        <p>Непревзойденное качество звука и комфорт в каждой детали.</p>
+                        <span class="price">14 990 ₽</span>
+                        <a href="#" class="button">В корзину</a>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/ноутбук.jpg" alt="Ноутбук">
+                        </div>
+                        <h3>Ноутбук Z</h3>
+                        <p>Мощность и стиль в одном устройстве для ваших задач.</p>
+                        <span class="price">99 990 ₽</span>
+                        <a href="#" class="button">В корзину</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="promo">
+                <div class="promo-content">
+                    <h2>Присоединяйтесь к DMTechnology</h2>
+                    <p>Будьте в курсе последних новинок и эксклюзивных предложений. Получайте персональные рекомендации.</p>
+                    <form>
+                        <input type="email" placeholder="Ваш email">
+                        <button type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.jpg" alt="TechStore Logo">
+                    <p>TechStore - Ваш проводник в мире технологий.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Полезные ссылки</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в социальных сетях</h4>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 DMTechnology</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const heroButton = document.querySelector(".hero .button");
+
+            if (heroButton) {
+                heroButton.addEventListener("mouseover", function () {
+                    heroButton.style.transform = "scale(1.1)";
+                });
+
+                heroButton.addEventListener("mouseout", function () {
+                    heroButton.style.transform = "scale(1)";
+                });
+            }
+
+            const productCards = document.querySelectorAll(".product-card");
+
+            productCards.forEach(card => {
+                card.addEventListener("mouseover", function() {
+                    card.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.4)";
+                    card.style.transform = "translateY(-5px)";
+                });
+
+                card.addEventListener("mouseout", function() {
+                    card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+                    card.style.transform = "translateY(0)";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
